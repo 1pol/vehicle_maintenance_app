@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Maintenance Predictor</title>
+</head>
+<body>
+    <h1>Vehicle Maintenance Predictor</h1>
+    <form method="POST">
+        <label>Vehicle Model:</label>
+        <select name="Vehicle_Model">
+            <option>Car</option><option>SUV</option><option>Van</option>
+            <option>Truck</option><option>Bus</option><option>Motorcycle</option>
+        </select><br>
+
+        <label>Mileage:</label>
+        <input type="number" name="Mileage" required><br>
+
+        <label>Maintenance History:</label>
+        <select name="Maintenance_History">
+            <option>Poor</option><option>Average</option><option>Good</option>
+        </select><br>
+
+        <label>Reported Issues:</label>
+        <input type="number" name="Reported_Issues" required><br>
+
+        <label>Vehicle Age:</label>
+        <input type="number" name="Vehicle_Age" required><br>
+
+        <label>Fuel Type:</label>
+        <select name="Fuel_Type">
+            <option>Petrol</option><option>Diesel</option><option>Electric</option>
+        </select><br>
+
+        <label>Transmission Type:</label>
+        <select name="Transmission_Type">
+            <option>Automatic</option><option>Manual</option>
+        </select><br>
+
+        <label>Engine Size (cc):</label>
+        <input type="number" name="Engine_Size" required><br>
+
+        <label>Odometer Reading:</label>
+        <input type="number" name="Odometer_Reading" required><br>
+
+        <label>Last Service Date:</label>
+        <input type="date" name="Last_Service_Date" required><br>
+
+        <label>Warranty Expiry Date:</label>
+        <input type="date" name="Warranty_Expiry_Date" required><br>
+
+        <label>Owner Type:</label>
+        <select name="Owner_Type">
+            <option>First</option><option>Second</option><option>Third</option>
+        </select><br>
+
+        <label>Insurance Premium:</label>
+        <input type="number" name="Insurance_Premium" required><br>
+
+        <label>Service History:</label>
+        <input type="number" name="Service_History" required><br>
+
+        <label>Accident History:</label>
+        <input type="number" name="Accident_History" required><br>
+
+        <label>Fuel Efficiency (km/l):</label>
+        <input type="number" name="Fuel_Efficiency" required><br>
+
+        <label>Tire Condition:</label>
+        <select name="Tire_Condition">
+            <option>Worn Out</option><option>Good</option><option>New</option>
+        </select><br>
+
+        <label>Brake Condition:</label>
+        <select name="Brake_Condition">
+            <option>Worn Out</option><option>Good</option><option>New</option>
+        </select><br>
+
+        <label>Battery Status:</label>
+        <select name="Battery_Status">
+            <option>Weak</option><option>Good</option><option>New</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+        <h2>Does the vehicle need maintenance? {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
